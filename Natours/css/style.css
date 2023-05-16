@@ -7,14 +7,16 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 html {
-  /* 10px = 1 rem assuming for easy calculations */
-  font-size: 10px;
+  /* 16px = 1 rem , so 10px = (10/16 = 0.625 that is 62.5%) for easy calculations. Hence 0.625*16= 10 px that is what we want 1rem =10px */
+  font-size: 62.5%;
 }
 
 body {
@@ -24,6 +26,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -136,6 +139,7 @@ body {
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 .btn:hover {
   transform: translateY(-0.3rem);
